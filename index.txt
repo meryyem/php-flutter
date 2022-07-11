@@ -1,0 +1,140 @@
+<?php
+/*echo "How are you ?" ; 
+
+$name = "maryem";
+function printName() {
+    echo $GLOBALS['name'] ;
+}
+printName();
+
+
+//indexed array
+$listname = array("maryem", "sakly", "maryemSakly", array("julie", "julien"));
+echo $listname[0];
+$listname[1] = "maryoum";
+
+//associated array
+$info = array(
+    "name" => "maryem",
+    "age" => 23
+);
+
+echo $info['name'];
+foreach($info as  $key=> $value ) {
+    echo $key;
+}
+
+for($i = 0 ; $i < count($listname) ; $i++) {
+    echo $listname[$i];
+}
+
+$info1 = array(
+    "maryem", 
+    "sakly", 
+    "maryemSakly", 
+    array(
+        "julie", 
+        "julien",
+        array(
+            "name" => "céline",
+            "age" => 23,
+            "rr" => array("aa")
+        )));
+
+print_r($info1[3][1]);
+echo $info1[3][1]['name'];
+echo $info1[3][1]['rr'][0];*/
+
+//REQUEST POST
+/*$name = $_GET['name'];
+$age = $_GET['age'];
+$email = $_GET['email'];*/
+
+//REQUEST POST
+//$name = $_POST['name'];
+//echo $name;
+
+//connect --------------------------------------------------------------------
+//include "connect.php";
+
+//$stmt = $connect -> prepare("SELECT * FROM users");
+//$user = $stmt ->fetch(PDO::FETCH_ASSOC);
+//print_r($user);
+
+//$stmt = $connect -> prepare("SELECT * FROM users where username = 'maryem' ");
+//$stmt -> execute();
+//$user = $stmt ->fetch(PDO::FETCH_ASSOC);
+//print_r($user) ;
+
+//$stmt = $connect -> prepare("SELECT email FROM users where username = 'maryem' ");
+//$stmt -> execute();
+//$user = $stmt ->fetchColumn();
+
+//$count = $stmt -> rowCount();
+
+
+
+
+//to json------------------------------------------------
+
+/*$stmt = $connect -> prepare("SELECT * FROM users");
+$stmt -> execute();
+$users = $stmt ->fetchAll(PDO::FETCH_ASSOC);
+echo json_encode($users);
+
+$stmt = $connect -> prepare("SELECT * FROM users WHERE username = 'maryem'");
+$stmt -> execute();
+$users = $stmt ->fetch(PDO::FETCH_ASSOC);
+echo json_encode($users);
+
+echo json_encode(array("message" => "php is amazing !!"));
+*/
+
+//insert data --------------------------------------------------
+/*
+//meth1:
+$stmt = $connect -> prepare("INSERT INTO `users` (`username`, `email`) VALUES ('louay', 'louay@gmail.com');");
+$stmt -> execute();
+
+//meth2: //more secure 
+$stmt = $connect -> prepare("INSERT INTO `users` (`username`, `email`) VALUES (:us, :em)");
+$stmt -> execute(array(
+    ":us" => "mazen",
+    ":em" => "mazen@gmail.com"
+));
+
+
+$count = $stmt ->rowCount();
+if ($count > 0) {
+    echo "success";
+}else {
+    echo "fail";
+}
+*/
+
+
+//update data-------------------------------------------------
+/*
+$stmt = $connect -> prepare("UPDATE `users` SET `username`='chadha' WHERE id=2");
+$stmt -> execute();
+$count = $stmt ->rowCount();
+if ($count > 0) {
+    echo "success";
+}else {
+    echo "fail";
+}
+
+*/
+
+//delete data -------------------------------------------------------
+/*$stmt = $connect -> prepare("DELETE FROM `users` WHERE id=3");
+$stmt -> execute();
+$count = $stmt ->rowCount();
+if ($count > 0) {
+    echo "success";
+}else {
+    echo "fail";
+}*/
+
+
+?>
